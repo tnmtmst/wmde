@@ -36,6 +36,28 @@
       $('#markdown-text').keyup();
     });
 
+    $(function() {
+        var inputElement = $('body');
+        inputElement
+        .on('dragenter', function(e) {
+          e.preventDefault();
+        })
+        .on('dragover', function(e) {
+          e.preventDefault();
+        })
+        .on('drop', function(e) {
+          e.preventDefault();
+          var file = e.originalEvent.dataTransfer.files[0];
+
+          var reader = new FileReader();
+          reader.onload = function(e) {
+              $('#markdown-text').text(e.target.result);
+              $('#markdown-text').keyup();
+          };
+          reader.readAsText(file, 'utf-8');
+        });
+    });
+
     function setBlobUrl(id, content) {
       var blob = new Blob([ content ], { "type" : "text/plain" });
       var filename = $("#file-name").val() || 'filename';

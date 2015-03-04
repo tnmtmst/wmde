@@ -1,6 +1,7 @@
 # Web Markdown Editor
 Simple is the best.  
-This editor is good vibes.
+This editor is good vibes.  
+Incidentally, I don't know English so much.
 
 [Demo Page](http://tnmtmst.github.io/wmde/)
 

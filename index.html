@@ -49,13 +49,13 @@
         .on('drop', function(e) {
           e.preventDefault();
           var file = e.originalEvent.dataTransfer.files[0];
-
           var reader = new FileReader();
           reader.onload = function(e) {
               $('#markdown-text').text(e.target.result);
               $('#markdown-text').keyup();
           };
           reader.readAsText(file, 'utf-8');
+          $('#file-name').val(file.name);
         });
     });
 

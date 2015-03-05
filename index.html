@@ -21,16 +21,13 @@
 
   <script>
     $(function(){
+      var client = new ZeroClipboard( $(".clip-button") );
       marked.setOptions({ langPrefix: '' });
       autosize($('#markdown-text'));
 
       if (typeof Blob === "undefined") {
         alert('This browser is unsupported');
       }
-
-      var client = new ZeroClipboard( $(".clip-button") );
-
-
 
       $('#markdown-text').keyup(function() {
         $('.html-text').html( marked($('#markdown-text').val()) );
@@ -71,7 +68,6 @@
     function setMarkdownText(file) {
       var reader = new FileReader();
       reader.onload = function(e) {
-        console.log(e.target.result);
         $('#markdown-text').val(e.target.result);
         $('#markdown-text').keyup();
       };

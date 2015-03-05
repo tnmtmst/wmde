@@ -8,7 +8,7 @@ Incidentally, I don't know English so much.
 * [Bootstrap](https://github.com/twbs/bootstrap)
 * [Marked.js](https://github.com/chjj/marked)
 * [Hilight.js](https://github.com/isagalaev/highlight.js)
-* [Autosizze.js](https://github.com/jackmoore/autosize)
+* [Autosize.js](https://github.com/jackmoore/autosize)
 
 # Usage
 * Open the file in the drop to window.  
